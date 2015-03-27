@@ -23,7 +23,7 @@ import org.springframework.core.io.support.PropertiesLoaderUtils;
  */
 public class PropertiesBrowserResolver implements UserAgentBrowserResolver {
 	public static final String DEFAULT_BROWSER_PROPERTY_PREFIX = "spring.browser";
-	public static final String DEFAULT_BROWSER_PROPERTY_FILE = "application.properties";
+	public static final String DEFAULT_BROWSER_PROPERTY_FILE = "browsers.properties";
 	
 	private RegexBrowserResolver delegate;
 	
