@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.browser.Browser;
 import org.springframework.browser.resolver.HttpRequestBrowserResolver;
-import org.springframework.browser.resolver.PropertiesBrowserResolver;
-import org.springframework.browser.resolver.UserAgentHttpHeaderDelegate;
 import org.springframework.browser.util.BrowserUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -27,19 +25,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 public class BrowserResolverRequestFilter extends OncePerRequestFilter {
 
 	private final HttpRequestBrowserResolver browserResolver;
-
-	/**
-	 * Create a browser resolving {@link Filter} that defaults to a
-	 * {@link UserAgentHttpHeaderDelegate} implementation. The
-	 * {@link UserAgentHttpHeaderDelegate} delegates the mapping to
-	 * {@link PropertiesBrowserResolver} implementation.
-	 * 
-	 * @throws IOException
-	 *             when property file couldn't be loaded
-	 */
-	public BrowserResolverRequestFilter() throws IOException {
-		this(new UserAgentHttpHeaderDelegate(new PropertiesBrowserResolver()));
-	}
 
 	/**
 	 * Create a browser resolving {@link Filter}.

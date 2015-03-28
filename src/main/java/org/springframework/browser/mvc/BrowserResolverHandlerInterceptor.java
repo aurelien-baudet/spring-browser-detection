@@ -1,14 +1,10 @@
 package org.springframework.browser.mvc;
 
-import java.io.IOException;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.browser.Browser;
 import org.springframework.browser.resolver.HttpRequestBrowserResolver;
-import org.springframework.browser.resolver.PropertiesBrowserResolver;
-import org.springframework.browser.resolver.UserAgentHttpHeaderDelegate;
 import org.springframework.browser.util.BrowserUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -26,19 +22,6 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 public class BrowserResolverHandlerInterceptor extends HandlerInterceptorAdapter {
 
 	private final HttpRequestBrowserResolver browserResolver;
-
-	/**
-	 * Create a browser resolving {@link HandlerInterceptor} that defaults to a
-	 * {@link UserAgentHttpHeaderDelegate} implementation. The
-	 * {@link UserAgentHttpHeaderDelegate} delegates the mapping to
-	 * {@link PropertiesBrowserResolver} implementation.
-	 * 
-	 * @throws IOException
-	 *             when property file couldn't be loaded
-	 */
-	public BrowserResolverHandlerInterceptor() throws IOException {
-		this(new UserAgentHttpHeaderDelegate(new PropertiesBrowserResolver()));
-	}
 
 	/**
 	 * Create a browser resolving {@link HandlerInterceptor}.

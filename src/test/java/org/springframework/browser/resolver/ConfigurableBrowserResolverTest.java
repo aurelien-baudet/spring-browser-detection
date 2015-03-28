@@ -11,9 +11,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=DefaultConfig.class)
-public class PropertiesBrowserResolverTest {
+public class ConfigurableBrowserResolverTest {
 	@Autowired
-	PropertiesBrowserResolver resolver;
+	ConfigurableBrowserResolver resolver;
 	
 	@Test
 	public void firefox() {
