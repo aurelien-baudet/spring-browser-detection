@@ -14,8 +14,8 @@
 		<git.url>https://github.com/aurelien-baudet/spring-browser-detection.git</git.url>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<nexus.release.url>http://nexus.devoxx.sii.fr/content/repositories/releases</nexus.release.url>
-		<nexus.snapshot.url>http://nexus.devoxx.sii.fr/content/repositories/snapshots</nexus.snapshot.url>
+		<nexus.release.url>http://nexus.devoxx.sii-ouest.fr/content/repositories/releases</nexus.release.url>
+		<nexus.snapshot.url>http://nexus.devoxx.sii-ouest.fr/content/repositories/snapshots</nexus.snapshot.url>
 	</properties>
 
 	<dependencies>
